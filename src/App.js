@@ -1,24 +1,53 @@
-import logo from './logo.svg';
+import Main from './Demos/Main';
 import './App.css';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
+import TestRouter from './testRouter/TestRouter';
+import Home from './testRouter/Home';
+import ErrorPage from './testRouter/ErrorPage';
+import Piano from './testRouter/Piano';
+import User from './testRouter/User';
+import ExportFiles from './testRouter/ExportFiles';
+import Guitar from './testRouter/Guitar';
+import {guitar_key_get, piano_key_get} from "./testRouter/loaderFunctions"; 
+
 
 function App() {
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <Home />,
+      errorElement: <ErrorPage />
+    },
+    {
+      path: "piano",
+      element: <Piano />,
+    },
+    {
+      path: "guitar",
+      element: <Guitar />,
+      loader : guitar_key_get,
+    }, 
+    {
+      path: "user/:username",
+      element: <User />
+    },
+    {
+      path: "exportFiles",
+      element: <ExportFiles />
+    }
+  ]);
+ 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      {/*<Main/> */}
+      {/*<TestRouter /> */}
+      <RouterProvider router = {router} /> 
+    </>
   );
 }
 

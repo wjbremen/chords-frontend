@@ -1,0 +1,63 @@
+<html>
+	<head>
+		<script> 
+				window.addEventListener("load", (event) => {
+					const audioContext = new AudioContext(); 
+  					const audioElement1 = document.querySelector("#audio1"); 
+  					const audioElement2 = document.querySelector("#audio2");
+  					const audioElement3 = document.querySelector("#audio3"); 
+  					const track1 = audioContext.createMediaElementSource(audioElement1); 
+  					const track2 = audioContext.createMediaElementSource(audioElement2); 
+  					const track3 = audioContext.createMediaElementSource(audioElement3); 
+  					track1.connect(audioContext.destination);
+  					track2.connect(audioContext.destination);
+  					track3.connect(audioContext.destination);
+
+  					const playButton = document.querySelector("button"); 
+  					playButton.addEventListener("click", function(){
+  						if (audioContext.state === "suspended") {
+     						 audioContext.resume();
+    					}
+    					if (playButton.dataset.playing === "false") {
+      						audioElement1.play();
+      						audioElement2.play();
+      						audioElement3.play();
+      						playButton.dataset.playing = "true";
+    					} else if (playButton.dataset.playing === "true") {
+      						audioElement1.pause();
+      						audioElement2.pause();
+      						audioElement3.pause();
+      						playButton.dataset.playing = "false";
+    					}
+
+  					}, false); 
+
+  					audioElement1.addEventListener(
+  						"ended",
+  						() => {
+    					playButton.dataset.playing = "false";
+  					},
+  						false
+					);
+
+
+
+				});
+				
+			 
+			
+			
+		</script>
+	</head>
+	<body>
+		
+		<h1> Testing web audio api</h1>
+		<div id = "box" style = "height: 80px; width: 80px; background-color: blue"> </div>
+		<audio src = "C.wav" id = "audio1"> </audio>
+		<audio src = "E.wav" id = "audio2"> </audio>
+		<audio src = "G.wav" id = "audio3"> </audio> 
+		<button data-playing = "false" role = "switch" aria-checked = "false">
+			<span> Play/Pause </span>
+		</button>
+	<body/>
+</html>
