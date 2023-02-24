@@ -1,4 +1,4 @@
-import Main from './Demos/Main';
+//import Main from './Demos/Main';
 import './App.css';
 import React from "react";
 import ReactDOM from "react-dom/client";
@@ -6,14 +6,14 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import TestRouter from './testRouter/TestRouter';
-import Home from './testRouter/Home';
-import ErrorPage from './testRouter/ErrorPage';
-import Piano from './testRouter/Piano';
-import User from './testRouter/User';
-import ExportFiles from './testRouter/ExportFiles';
-import Guitar from './testRouter/Guitar';
-import {guitar_key_get, piano_key_get} from "./testRouter/loaderFunctions"; 
+import TestRouter from './routes/TestRouter';
+import Home from './routes/Home';
+import ErrorPage from './routes/ErrorPage';
+import Piano from './routes/Piano';
+import User from './routes/User';
+import ExportFiles from './routes/ExportFiles';
+import Guitar from './routes/Guitar';
+import {guitar_key_get, piano_key_get} from "./routes/loaderFunctions"; 
 
 
 function App() {

@@ -169,241 +169,6 @@ export default function Piano(){
                 selectedNote = pianoNote21; 
                 break;
             case 22:
-                selectedNote = SetPianoNote22; 
-                break;
-            case 23:
-                selectedNote = SetPianoNote23; 
-                break;
-            case 24:
-                selectedNote = SetPianoNote24; 
-                break;
-            case 25:
-                selectedNote = SetPianoNote25; 
-                break;
-            case 26:
-                selectedNote = SetPianoNote26; 
-                break;
-            case 27:
-                selectedNote = SetPianoNote27; 
-                break;
-            case 28:
-                selectedNote = SetPianoNote28; 
-                break;
-            case 29:
-                selectedNote = SetPianoNote29; 
-                break;
-            case 30:
-                selectedNote = SetPianoNote30;  
-                break;
-            case 31:
-                selectedNote = SetPianoNote31; 
-                break;
-            case 32:
-                selectedNote = SetPianoNote32; 
-                break;
-            case 33:
-                selectedNote = SetPianoNote33; 
-                break;
-            case 34:
-                selectedNote = SetPianoNote34; 
-                break;
-            case 35:
-                selectedNote = SetPianoNote35; 
-                break;
-            case 36:
-                selectedNote = SetPianoNote36; 
-                break;
-            case 37:
-                selectedNote = SetPianoNote37; 
-                break;
-            case 38:
-                selectedNote = SetPianoNote38; 
-                break;
-            case 39:
-                selectedNote = SetPianoNote39; 
-                break;
-            case 40:
-                selectedNote = SetPianoNote40; 
-                break;
-            case 41:
-                selectedNote = SetPianoNote41; 
-                break;
-            case 42:
-                selectedNote = SetPianoNote42; 
-                break;    
-            case 43:
-                selectedNote = SetPianoNote43; 
-                break;
-            case 44:
-                selectedNote = SetPianoNote44; 
-                break;
-            case 45:
-                selectedNote = SetPianoNote45; 
-                break;
-            case 46:
-                selectedNote = SetPianoNote46; 
-                break;
-            case 47:
-                selectedNote = SetPianoNote47; 
-                break;
-            case 48:
-                selectedNote = SetPianoNote48; 
-                break;
-            case 49:
-                selectedNote = SetPianoNote49; 
-                break;
-            case 50:
-                selectedNote = SetPianoNote50; 
-                break;
-            case 51:
-                selectedNote = SetPianoNote51; 
-                break;
-            case 52:
-                selectedNote = SetPianoNote52; 
-                break;
-            case 53:
-                selectedNote = SetPianoNote53; 
-                break;   
-            case 54:
-                selectedNote = SetPianoNote54; 
-                break;
-            case 55:
-                selectedNote = SetPianoNote55; 
-                break;
-            case 56:
-                selectedNote = SetPianoNote56; 
-                break;
-            case 57:
-                selectedNote = SetPianoNote57; 
-                break;
-            case 58:
-                selectedNote = SetPianoNote58; 
-                break;
-            case 59:
-                selectedNote = SetPianoNote59; 
-                break;
-            case 60:
-                selectedNote = SetPianoNote60; 
-                break;
-            case 61:
-                selectedNote = SetPianoNote61; 
-                break;
-            case 62:
-                selectedNote = SetPianoNote62; 
-                break;
-            case 63:
-                selectedNote = SetPianoNote63; 
-                break;
-            case 64:
-                selectedNote = SetPianoNote64; 
-                break;
-            case 65:
-                selectedNote = SetPianoNote65; 
-                break;
-            case 66:
-                selectedNote = SetPianoNote66; 
-                break;
-            case 67:
-                selectedNote = SetPianoNote67; 
-                break;
-            case 68:
-                selectedNote = SetPianoNote68; 
-                break;
-            case 69:
-                selectedNote = SetPianoNote69; 
-                break;
-            case 70:
-                selectedNote = SetPianoNote70; 
-                break;
-            case 71:
-                selectedNote = SetPianoNote71; 
-                break;
-            case 72:
-                selectedNote = SetPianoNote72; 
-                break;
-            case 73:
-                selectedNote = SetPianoNote73; 
-                break;
-            case 74:
-                selectedNote = SetPianoNote74; 
-                break;
-            case 75:
-                selectedNote = SetPianoNote75; 
-                break;    
-            case 76:
-                selectedNote = SetPianoNote76; 
-                break;
-            case 77:
-                selectedNote = SetPianoNote77; 
-                break;
-            case 78:
-                selectedNote = SetPianoNote78; 
-                break;
-            case 79:
-                selectedNote = SetPianoNote79; 
-                break;
-            case 80:
-                selectedNote = SetPianoNote80; 
-                break;
-            case 81:
-                selectedNote = SetPianoNote81; 
-                break;
-            case 82:
-                selectedNote = SetPianoNote82; 
-                break;
-            case 83:
-                selectedNote = SetPianoNote83; 
-                break;
-            case 84:
-                selectedNote = SetPianoNote84; 
-                break;
-            case 85:
-                selectedNote = SetPianoNote85; 
-                break;
-            case 86:
-                selectedNote = SetPianoNote86; 
-                break;   
-            case 87:
-                selectedNote = SetPianoNote87; 
-                break;
-            case 88:
-                selectedNote = SetPianoNote88; 
-                break;
-            case 89:
-                selectedNote = SetPianoNote89; 
-                break;
-            case 90:
-                selectedNote = SetPianoNote90; 
-                break;
-            case 91:
-                selectedNote = SetPianoNote91; 
-                break;
-            case 92:
-                selectedNote = SetPianoNote92; 
-                break;
-            case 93:
-                selectedNote = SetPianoNote93; 
-                break;
-            case 94:
-                selectedNote = SetPianoNote94; 
-                break;  
-            case 95:
-                selectedNote = SetPianoNote95; 
-                break;
-            case 96:
-                selectedNote = SetPianoNote96; 
-                break;  
-        }
-        return selectedNote; 
-    }
-
-    function noteUpdaterSelector(noteNumber){
-        let selectedNote = null; 
-        switch(noteNumber){
-            case 21:
-                selectedNote = setPianoNote21; 
-                break;
-            case 22:
                 selectedNote = pianoNote22; 
                 break;
             case 23:
@@ -632,6 +397,241 @@ export default function Piano(){
         return selectedNote; 
     }
 
+    function noteUpdaterSelector(noteNumber){
+        let selectedNote = null; 
+        switch(noteNumber){
+            case 21:
+                selectedNote = setPianoNote21; 
+                break;
+            case 22:
+                selectedNote = setPianoNote22; 
+                break;
+            case 23:
+                selectedNote = setPianoNote23; 
+                break;
+            case 24:
+                selectedNote = setPianoNote24; 
+                break;
+            case 25:
+                selectedNote = setPianoNote25; 
+                break;
+            case 26:
+                selectedNote = setPianoNote26; 
+                break;
+            case 27:
+                selectedNote = setPianoNote27; 
+                break;
+            case 28:
+                selectedNote = setPianoNote28; 
+                break;
+            case 29:
+                selectedNote = setPianoNote29; 
+                break;
+            case 30:
+                selectedNote = setPianoNote30;  
+                break;
+            case 31:
+                selectedNote = setPianoNote31; 
+                break;
+            case 32:
+                selectedNote = setPianoNote32; 
+                break;
+            case 33:
+                selectedNote = setPianoNote33; 
+                break;
+            case 34:
+                selectedNote = setPianoNote34; 
+                break;
+            case 35:
+                selectedNote = setPianoNote35; 
+                break;
+            case 36:
+                selectedNote = setPianoNote36; 
+                break;
+            case 37:
+                selectedNote = setPianoNote37; 
+                break;
+            case 38:
+                selectedNote = setPianoNote38; 
+                break;
+            case 39:
+                selectedNote = setPianoNote39; 
+                break;
+            case 40:
+                selectedNote = setPianoNote40; 
+                break;
+            case 41:
+                selectedNote = setPianoNote41; 
+                break;
+            case 42:
+                selectedNote = setPianoNote42; 
+                break;    
+            case 43:
+                selectedNote = setPianoNote43; 
+                break;
+            case 44:
+                selectedNote = setPianoNote44; 
+                break;
+            case 45:
+                selectedNote = setPianoNote45; 
+                break;
+            case 46:
+                selectedNote = setPianoNote46; 
+                break;
+            case 47:
+                selectedNote = setPianoNote47; 
+                break;
+            case 48:
+                selectedNote = setPianoNote48; 
+                break;
+            case 49:
+                selectedNote = setPianoNote49; 
+                break;
+            case 50:
+                selectedNote = setPianoNote50; 
+                break;
+            case 51:
+                selectedNote = setPianoNote51; 
+                break;
+            case 52:
+                selectedNote = setPianoNote52; 
+                break;
+            case 53:
+                selectedNote = setPianoNote53; 
+                break;   
+            case 54:
+                selectedNote = setPianoNote54; 
+                break;
+            case 55:
+                selectedNote = setPianoNote55; 
+                break;
+            case 56:
+                selectedNote = setPianoNote56; 
+                break;
+            case 57:
+                selectedNote = setPianoNote57; 
+                break;
+            case 58:
+                selectedNote = setPianoNote58; 
+                break;
+            case 59:
+                selectedNote = setPianoNote59; 
+                break;
+            case 60:
+                selectedNote = setPianoNote60; 
+                break;
+            case 61:
+                selectedNote = setPianoNote61; 
+                break;
+            case 62:
+                selectedNote = setPianoNote62; 
+                break;
+            case 63:
+                selectedNote = setPianoNote63; 
+                break;
+            case 64:
+                selectedNote = setPianoNote64; 
+                break;
+            case 65:
+                selectedNote = setPianoNote65; 
+                break;
+            case 66:
+                selectedNote = setPianoNote66; 
+                break;
+            case 67:
+                selectedNote = setPianoNote67; 
+                break;
+            case 68:
+                selectedNote = setPianoNote68; 
+                break;
+            case 69:
+                selectedNote = setPianoNote69; 
+                break;
+            case 70:
+                selectedNote = setPianoNote70; 
+                break;
+            case 71:
+                selectedNote = setPianoNote71; 
+                break;
+            case 72:
+                selectedNote = setPianoNote72; 
+                break;
+            case 73:
+                selectedNote = setPianoNote73; 
+                break;
+            case 74:
+                selectedNote = setPianoNote74; 
+                break;
+            case 75:
+                selectedNote = setPianoNote75; 
+                break;    
+            case 76:
+                selectedNote = setPianoNote76; 
+                break;
+            case 77:
+                selectedNote = setPianoNote77; 
+                break;
+            case 78:
+                selectedNote = setPianoNote78; 
+                break;
+            case 79:
+                selectedNote = setPianoNote79; 
+                break;
+            case 80:
+                selectedNote = setPianoNote80; 
+                break;
+            case 81:
+                selectedNote = setPianoNote81; 
+                break;
+            case 82:
+                selectedNote = setPianoNote82; 
+                break;
+            case 83:
+                selectedNote = setPianoNote83; 
+                break;
+            case 84:
+                selectedNote = setPianoNote84; 
+                break;
+            case 85:
+                selectedNote = setPianoNote85; 
+                break;
+            case 86:
+                selectedNote = setPianoNote86; 
+                break;   
+            case 87:
+                selectedNote = setPianoNote87; 
+                break;
+            case 88:
+                selectedNote = setPianoNote88; 
+                break;
+            case 89:
+                selectedNote = setPianoNote89; 
+                break;
+            case 90:
+                selectedNote = setPianoNote90; 
+                break;
+            case 91:
+                selectedNote = setPianoNote91; 
+                break;
+            case 92:
+                selectedNote = setPianoNote92; 
+                break;
+            case 93:
+                selectedNote = setPianoNote93; 
+                break;
+            case 94:
+                selectedNote = setPianoNote94; 
+                break;  
+            case 95:
+                selectedNote = setPianoNote95; 
+                break;
+            case 96:
+                selectedNote = setPianoNote96; 
+                break;  
+        }
+        return selectedNote; 
+    }
+
     function loadAllNotes() {
         for(let note = 21; note <= 96; note++){
             let audio = noteSelector(note); 
@@ -643,8 +643,17 @@ export default function Piano(){
     }
 
     function playNotes(notes){
+        for(let note = 21; note <= 96; note++){
+            let selectedNote = noteSelector(note); 
+            selectedNote.pause(); 
+        }
         notes.forEach( (note)=> {
-            noteSelector(note).play(); 
+            let selectedNote = noteSelector(note); 
+            if(selectedNote){
+                selectedNote.pause(); 
+                selectedNote.currentTime = 0; 
+                selectedNote.play(); 
+            }
         }); 
     }
 
@@ -652,7 +661,10 @@ export default function Piano(){
 
     return (
         <>
-        <Button onClick = {() => {playNotes([43,48,50,52])}}>Play note 21</Button>    
+        <Button onClick = {() => {playNotes([43,48,50,52])}}>C</Button>    
+        <Button onClick = {() => {playNotes([43,48,51,52])}}>G</Button>    
+        <Button onClick = {() => {playNotes([43,48,50,55])}}>F</Button> 
+        <Button onClick = {() => {playNotes([43,48,50,52])}}>Am</Button>       
         <div>Piano page!</div>
         </>
     ); 
