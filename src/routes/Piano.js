@@ -1,5 +1,6 @@
 import { Button } from "@mui/material";
 import { useEffect, useRef, useState } from "react";
+import { get_chord_data as loaderFunction } from "./loaderFunctions";
 import {useLoaderData} from "react-router-dom"; 
 
 import midiNote21 from "../pianoAudioFiles/pianoMidiNote21.mp3"; 
@@ -161,6 +162,9 @@ export default function Piano(){
     let [pianoNote94, setPianoNote94] = useState(new Audio(midiNote94));
     let [pianoNote95, setPianoNote95] = useState(new Audio(midiNote95));
     let [pianoNote96, setPianoNote96] = useState(new Audio(midiNote96));    
+
+    const chordData  = useLoaderData(); 
+
 
     function noteSelector(noteNumber){
         let selectedNote = null; 
@@ -636,7 +640,7 @@ export default function Piano(){
         for(let note = 21; note <= 96; note++){
             let audio = noteSelector(note); 
             if(audio){
-                console.log("loading note :" + note); 
+                //console.log("loading note :" + note); 
                 audio.load(); 
             }
         }
@@ -661,6 +665,7 @@ export default function Piano(){
 
     return (
         <>
+        <div>chordData : {chordData} </div>
         <Button onClick = {() => {playNotes([43,48,50,52])}}>C</Button>    
         <Button onClick = {() => {playNotes([43,48,51,52])}}>G</Button>    
         <Button onClick = {() => {playNotes([43,48,50,55])}}>F</Button> 

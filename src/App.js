@@ -13,7 +13,7 @@ import Piano from './routes/Piano';
 import User from './routes/User';
 import ExportFiles from './routes/ExportFiles';
 import Guitar from './routes/Guitar';
-import {guitar_key_get, piano_key_get} from "./routes/loaderFunctions"; 
+import { get_chord_data} from "./routes/loaderFunctions"; 
 
 
 function App() {
@@ -26,11 +26,11 @@ function App() {
     {
       path: "piano",
       element: <Piano />,
+      loader: get_chord_data, 
     },
     {
       path: "guitar",
       element: <Guitar />,
-      loader : guitar_key_get,
     }, 
     {
       path: "user/:username",
