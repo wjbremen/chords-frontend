@@ -3,14 +3,30 @@
 
 export async function get_chord_data(){
     //const chordData = await fetch("/getChordData/byKey/C/major"); 
-    const chordData = await fetch("/getChordData/byRoot/55/66")
+    let loaderData = {}; 
+    const chordData = await fetch("/getChordData/byKey/all")
     .then( resp => {
+        //console.log("resp " , resp ); 
         return resp.text(); 
+         
     }).then(bodyText => {
-        return bodyText; 
+        return JSON.parse(bodyText);
     }); 
     console.log("chordData ", chordData); 
-    return chordData; 
+    loaderData["musicalKeyObjects"] = chordData; 
+
+    //middle C is midi 60, B above middle C is 71
+    const byRoot = await fetch("/getChordData/byRoot/60/71")
+    .then( resp => {
+        return resp.text();
+    })
+    .then( bodyText => {
+        return JSON.parse(bodyText); 
+    });
+
+    loaderData["chordsByRoot"] = byRoot; 
+    return loaderData; 
+
 }
 /*
 export async function guitar_key_get() {

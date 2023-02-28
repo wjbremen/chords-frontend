@@ -662,10 +662,152 @@ export default function Piano(){
     }
 
     loadAllNotes(); 
+    //const musicalKeys = chordData.map( data => {return data.key; })
+    //console.log(musicalKeys); 
+    //console.log("loader data keys : ", Object.keys(chordData)); 
+    //console.log("MusicalKeys : ", chordData["musicalKeyObjects"]);
+    //console.log("musicalKeyObject.MusicalKeys, ", chordData["MusicalKeyObjects"].MusicalKeys); 
+    //chordData["musicalKeyObjects"].forEach( ob => 
+    //    {console.log(ob); } )
+    console.log("chords by root ", chordData["chordsByRoot"]); 
+    
+    /*
+    /////////////////////////////////////////////////////////
+    /// Structure of "chordData" ////////////////////////
+    ////////////////////////////////////////////////////////
+    // chordData = {
+    //      musicalKeyObjects : [
+    //          {
+                    _id: '63b372a7433a0c69c2511d6f',
+                    sharpsOrFlats: "b", 
+                    key: ["E", "locrian"],  
+                    chords: [
+                        {
+                            octave : 1, 
+                            scaleDegree: [
+                                {
+                                    scaleDegree: 1, 
+                                    chords: [
+                                        {
+                                            notes: ["C", "E", "G"], 
+                                            root: "E",
+                                            type: "dim",
+                                            _id: String
+                                        },
+                                        {
+                                            notes: ["D", "E", "G"], 
+                                            root: "D",
+                                            type: "minor",
+                                            _id: String,
+                                        },
+                                        {
+                                            ......
+                                        },
+                                        .......
+                                    ]
+                                },
+                                {
+                                    scaleDegree: 2, 
+                                    chords: [
+                                        .....
+                                    ]
+                                }
+                            ]
+                        }, 
+                        {
+                            octave: 2, 
+                            scaleDegree: [...]
+                        }
+                    ], 
+                },
+                {...}, 
+                {...}, ...
+    //      ],
+    //      chordsByRoot : { 
+                chordsByRoot: [
+                    {
+                        _id: '63d30aaa8e891047839e9e42', 
+                        rootLetter: ["C", "natural"], 
+                        rootMidi: 60, 
+                        usingFlats: TRUE, 
+                        usingSharps: FALSE, 
+                        chords: [
+                            {
+                                notations: {
+                                    description: "Major triad",
+                                    long: "maj", 
+                                    longHasSuperScript: false, 
+                                    longHtml: "", 
+                                    other: "",
+                                    short: "M", 
+                                    shortHasSuperScript: false, 
+                                    shortHtml: ""
+                                },
+                                midiNotes: [55, 58, 62], 
+                                letterNotes: ["C", "E", "G"], 
+                            }, 
+                            .......
+                        ], 
+                    },
+                    {
+                        _id: '63d30aaa8e891047839e9e42', 
+                        rootLetter: ["C", "natural"], 
+                        rootMidi: 60, 
+                        usingFlats: FALSE, 
+                        usingSharps: TRUE, 
+                        chords: [
+                            {
+                                notations: {
+                                    description: "Major triad",
+                                    long: "maj", 
+                                    longHasSuperScript: false, 
+                                    longHtml: "", 
+                                    other: "",
+                                    short: "M", 
+                                    shortHasSuperScript: false, 
+                                    shortHtml: ""
+                                },
+                                midiNotes: [55, 58, 62], 
+                                letterNotes: ["C", "E", "G"], 
+                            }, 
+                            .......
+                        ], 
+                    },
+                    {
+                        _id: '63d30aaa8e891047839e9e42', 
+                        rootLetter: ["C", "#"], 
+                        rootMidi: 61, 
+                        usingFlats: FALSE, 
+                        usingSharps: TRUE, 
+                        chords: [
+                            {
+                                notations: {
+                                    description: "Major triad",
+                                    long: "maj", 
+                                    longHasSuperScript: false, 
+                                    longHtml: "", 
+                                    other: "",
+                                    short: "M", 
+                                    shortHasSuperScript: false, 
+                                    shortHtml: ""
+                                },
+                                midiNotes: [55, 58, 62], 
+                                letterNotes: ["C", "E", "G"], 
+                            }, 
+                            .......
+                        ], 
+                    },
 
+                ] 
+            }
+    // }
+    //
+    /////////////////////////////////
+    // 
+    */
     return (
         <>
-        <div>chordData : {chordData} </div>
+
         <Button onClick = {() => {playNotes([43,48,50,52])}}>C</Button>    
         <Button onClick = {() => {playNotes([43,48,51,52])}}>G</Button>    
         <Button onClick = {() => {playNotes([43,48,50,55])}}>F</Button> 
