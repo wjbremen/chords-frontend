@@ -9,7 +9,7 @@ import {
 import TestRouter from './routes/TestRouter';
 import Home from './routes/Home';
 import ErrorPage from './routes/ErrorPage';
-import Piano from './routes/Piano';
+import PianoMain from './routes/Piano/PianoMain';
 import User from './routes/User';
 import ExportFiles from './routes/ExportFiles';
 import Guitar from './routes/Guitar';
@@ -25,7 +25,7 @@ function App() {
     },
     {
       path: "piano",
-      element: <Piano />,
+      element: <PianoMain/>,
       loader: get_chord_data, 
     },
     {

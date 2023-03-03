@@ -1,84 +1,89 @@
 import { Button } from "@mui/material";
 import { useEffect, useRef, useState } from "react";
-import { get_chord_data as loaderFunction } from "./loaderFunctions";
+import { get_chord_data as loaderFunction } from "../loaderFunctions";
 import {useLoaderData} from "react-router-dom"; 
+import PianoChordMenu from "./Desktop/PianoChordMenu";
+import MobileMain from "./Mobile/MobileMain"; 
+import DesktopMain from "./Desktop/DesktopMain";
 
-import midiNote21 from "../pianoAudioFiles/pianoMidiNote21.mp3"; 
-import midiNote22 from "../pianoAudioFiles/pianoMidiNote22.mp3"; 
-import midiNote23 from "../pianoAudioFiles/pianoMidiNote23.mp3"; 
-import midiNote24 from "../pianoAudioFiles/pianoMidiNote24.mp3"; 
-import midiNote25 from "../pianoAudioFiles/pianoMidiNote25.mp3"; 
-import midiNote26 from "../pianoAudioFiles/pianoMidiNote26.mp3"; 
-import midiNote27 from "../pianoAudioFiles/pianoMidiNote27.mp3"; 
-import midiNote28 from "../pianoAudioFiles/pianoMidiNote28.mp3"; 
-import midiNote29 from "../pianoAudioFiles/pianoMidiNote29.mp3"; 
-import midiNote30 from "../pianoAudioFiles/pianoMidiNote30.mp3"; 
-import midiNote31 from "../pianoAudioFiles/pianoMidiNote31.mp3"; 
-import midiNote32 from "../pianoAudioFiles/pianoMidiNote32.mp3"; 
-import midiNote33 from "../pianoAudioFiles/pianoMidiNote33.mp3"; 
-import midiNote34 from "../pianoAudioFiles/pianoMidiNote34.mp3"; 
-import midiNote35 from "../pianoAudioFiles/pianoMidiNote35.mp3"; 
-import midiNote36 from "../pianoAudioFiles/pianoMidiNote36.mp3"; 
-import midiNote37 from "../pianoAudioFiles/pianoMidiNote37.mp3"; 
-import midiNote38 from "../pianoAudioFiles/pianoMidiNote38.mp3"; 
-import midiNote39 from "../pianoAudioFiles/pianoMidiNote39.mp3"; 
-import midiNote40 from "../pianoAudioFiles/pianoMidiNote40.mp3"; 
-import midiNote41 from "../pianoAudioFiles/pianoMidiNote41.mp3"; 
-import midiNote42 from "../pianoAudioFiles/pianoMidiNote42.mp3"; 
-import midiNote43 from "../pianoAudioFiles/pianoMidiNote43.mp3"; 
-import midiNote44 from "../pianoAudioFiles/pianoMidiNote44.mp3"; 
-import midiNote45 from "../pianoAudioFiles/pianoMidiNote45.mp3"; 
-import midiNote46 from "../pianoAudioFiles/pianoMidiNote46.mp3"; 
-import midiNote47 from "../pianoAudioFiles/pianoMidiNote47.mp3"; 
-import midiNote48 from "../pianoAudioFiles/pianoMidiNote48.mp3"; 
-import midiNote49 from "../pianoAudioFiles/pianoMidiNote49.mp3"; 
-import midiNote50 from "../pianoAudioFiles/pianoMidiNote50.mp3"; 
-import midiNote51 from "../pianoAudioFiles/pianoMidiNote51.mp3"; 
-import midiNote52 from "../pianoAudioFiles/pianoMidiNote52.mp3"; 
-import midiNote53 from "../pianoAudioFiles/pianoMidiNote53.mp3"; 
-import midiNote54 from "../pianoAudioFiles/pianoMidiNote54.mp3"; 
-import midiNote55 from "../pianoAudioFiles/pianoMidiNote55.mp3"; 
-import midiNote56 from "../pianoAudioFiles/pianoMidiNote56.mp3"; 
-import midiNote57 from "../pianoAudioFiles/pianoMidiNote57.mp3"; 
-import midiNote58 from "../pianoAudioFiles/pianoMidiNote58.mp3"; 
-import midiNote59 from "../pianoAudioFiles/pianoMidiNote59.mp3";
-import midiNote60 from "../pianoAudioFiles/pianoMidiNote60.mp3";
-import midiNote61 from "../pianoAudioFiles/pianoMidiNote61.mp3";
-import midiNote62 from "../pianoAudioFiles/pianoMidiNote62.mp3";
-import midiNote63 from "../pianoAudioFiles/pianoMidiNote63.mp3";
-import midiNote64 from "../pianoAudioFiles/pianoMidiNote64.mp3";
-import midiNote65 from "../pianoAudioFiles/pianoMidiNote65.mp3";
-import midiNote66 from "../pianoAudioFiles/pianoMidiNote66.mp3";
-import midiNote67 from "../pianoAudioFiles/pianoMidiNote67.mp3";
-import midiNote68 from "../pianoAudioFiles/pianoMidiNote68.mp3";
-import midiNote69 from "../pianoAudioFiles/pianoMidiNote69.mp3";
-import midiNote70 from "../pianoAudioFiles/pianoMidiNote70.mp3";
-import midiNote71 from "../pianoAudioFiles/pianoMidiNote71.mp3";
-import midiNote72 from "../pianoAudioFiles/pianoMidiNote72.mp3";
-import midiNote73 from "../pianoAudioFiles/pianoMidiNote73.mp3";
-import midiNote74 from "../pianoAudioFiles/pianoMidiNote74.mp3";
-import midiNote75 from "../pianoAudioFiles/pianoMidiNote75.mp3";
-import midiNote76 from "../pianoAudioFiles/pianoMidiNote76.mp3";
-import midiNote77 from "../pianoAudioFiles/pianoMidiNote77.mp3";
-import midiNote78 from "../pianoAudioFiles/pianoMidiNote78.mp3";
-import midiNote79 from "../pianoAudioFiles/pianoMidiNote79.mp3";
-import midiNote80 from "../pianoAudioFiles/pianoMidiNote80.mp3";
-import midiNote81 from "../pianoAudioFiles/pianoMidiNote81.mp3";
-import midiNote82 from "../pianoAudioFiles/pianoMidiNote82.mp3";
-import midiNote83 from "../pianoAudioFiles/pianoMidiNote83.mp3";
-import midiNote84 from "../pianoAudioFiles/pianoMidiNote84.mp3";
-import midiNote85 from "../pianoAudioFiles/pianoMidiNote85.mp3";
-import midiNote86 from "../pianoAudioFiles/pianoMidiNote86.mp3";
-import midiNote87 from "../pianoAudioFiles/pianoMidiNote87.mp3";
-import midiNote88 from "../pianoAudioFiles/pianoMidiNote88.mp3";
-import midiNote89 from "../pianoAudioFiles/pianoMidiNote89.mp3";
-import midiNote90 from "../pianoAudioFiles/pianoMidiNote90.mp3";
-import midiNote91 from "../pianoAudioFiles/pianoMidiNote91.mp3";
-import midiNote92 from "../pianoAudioFiles/pianoMidiNote92.mp3";
-import midiNote93 from "../pianoAudioFiles/pianoMidiNote93.mp3";
-import midiNote94 from "../pianoAudioFiles/pianoMidiNote94.mp3";
-import midiNote95 from "../pianoAudioFiles/pianoMidiNote95.mp3";
-import midiNote96 from "../pianoAudioFiles/pianoMidiNote96.mp3";
+
+import midiNote21 from "../../pianoAudioFiles/pianoMidiNote21.mp3"; 
+import midiNote22 from "../../pianoAudioFiles/pianoMidiNote22.mp3"; 
+import midiNote23 from "../../pianoAudioFiles/pianoMidiNote23.mp3"; 
+import midiNote24 from "../../pianoAudioFiles/pianoMidiNote24.mp3"; 
+import midiNote25 from "../../pianoAudioFiles/pianoMidiNote25.mp3"; 
+import midiNote26 from "../../pianoAudioFiles/pianoMidiNote26.mp3"; 
+import midiNote27 from "../../pianoAudioFiles/pianoMidiNote27.mp3"; 
+import midiNote28 from "../../pianoAudioFiles/pianoMidiNote28.mp3"; 
+import midiNote29 from "../../pianoAudioFiles/pianoMidiNote29.mp3"; 
+import midiNote30 from "../../pianoAudioFiles/pianoMidiNote30.mp3"; 
+import midiNote31 from "../../pianoAudioFiles/pianoMidiNote31.mp3"; 
+import midiNote32 from "../../pianoAudioFiles/pianoMidiNote32.mp3"; 
+import midiNote33 from "../../pianoAudioFiles/pianoMidiNote33.mp3"; 
+import midiNote34 from "../../pianoAudioFiles/pianoMidiNote34.mp3"; 
+import midiNote35 from "../../pianoAudioFiles/pianoMidiNote35.mp3"; 
+import midiNote36 from "../../pianoAudioFiles/pianoMidiNote36.mp3"; 
+import midiNote37 from "../../pianoAudioFiles/pianoMidiNote37.mp3"; 
+import midiNote38 from "../../pianoAudioFiles/pianoMidiNote38.mp3"; 
+import midiNote39 from "../../pianoAudioFiles/pianoMidiNote39.mp3"; 
+import midiNote40 from "../../pianoAudioFiles/pianoMidiNote40.mp3"; 
+import midiNote41 from "../../pianoAudioFiles/pianoMidiNote41.mp3"; 
+import midiNote42 from "../../pianoAudioFiles/pianoMidiNote42.mp3"; 
+import midiNote43 from "../../pianoAudioFiles/pianoMidiNote43.mp3"; 
+import midiNote44 from "../../pianoAudioFiles/pianoMidiNote44.mp3"; 
+import midiNote45 from "../../pianoAudioFiles/pianoMidiNote45.mp3"; 
+import midiNote46 from "../../pianoAudioFiles/pianoMidiNote46.mp3"; 
+import midiNote47 from "../../pianoAudioFiles/pianoMidiNote47.mp3"; 
+import midiNote48 from "../../pianoAudioFiles/pianoMidiNote48.mp3"; 
+import midiNote49 from "../../pianoAudioFiles/pianoMidiNote49.mp3"; 
+import midiNote50 from "../../pianoAudioFiles/pianoMidiNote50.mp3"; 
+import midiNote51 from "../../pianoAudioFiles/pianoMidiNote51.mp3"; 
+import midiNote52 from "../../pianoAudioFiles/pianoMidiNote52.mp3"; 
+import midiNote53 from "../../pianoAudioFiles/pianoMidiNote53.mp3"; 
+import midiNote54 from "../../pianoAudioFiles/pianoMidiNote54.mp3"; 
+import midiNote55 from "../../pianoAudioFiles/pianoMidiNote55.mp3"; 
+import midiNote56 from "../../pianoAudioFiles/pianoMidiNote56.mp3"; 
+import midiNote57 from "../../pianoAudioFiles/pianoMidiNote57.mp3"; 
+import midiNote58 from "../../pianoAudioFiles/pianoMidiNote58.mp3"; 
+import midiNote59 from "../../pianoAudioFiles/pianoMidiNote59.mp3";
+import midiNote60 from "../../pianoAudioFiles/pianoMidiNote60.mp3";
+import midiNote61 from "../../pianoAudioFiles/pianoMidiNote61.mp3";
+import midiNote62 from "../../pianoAudioFiles/pianoMidiNote62.mp3";
+import midiNote63 from "../../pianoAudioFiles/pianoMidiNote63.mp3";
+import midiNote64 from "../../pianoAudioFiles/pianoMidiNote64.mp3";
+import midiNote65 from "../../pianoAudioFiles/pianoMidiNote65.mp3";
+import midiNote66 from "../../pianoAudioFiles/pianoMidiNote66.mp3";
+import midiNote67 from "../../pianoAudioFiles/pianoMidiNote67.mp3";
+import midiNote68 from "../../pianoAudioFiles/pianoMidiNote68.mp3";
+import midiNote69 from "../../pianoAudioFiles/pianoMidiNote69.mp3";
+import midiNote70 from "../../pianoAudioFiles/pianoMidiNote70.mp3";
+import midiNote71 from "../../pianoAudioFiles/pianoMidiNote71.mp3";
+import midiNote72 from "../../pianoAudioFiles/pianoMidiNote72.mp3";
+import midiNote73 from "../../pianoAudioFiles/pianoMidiNote73.mp3";
+import midiNote74 from "../../pianoAudioFiles/pianoMidiNote74.mp3";
+import midiNote75 from "../../pianoAudioFiles/pianoMidiNote75.mp3";
+import midiNote76 from "../../pianoAudioFiles/pianoMidiNote76.mp3";
+import midiNote77 from "../../pianoAudioFiles/pianoMidiNote77.mp3";
+import midiNote78 from "../../pianoAudioFiles/pianoMidiNote78.mp3";
+import midiNote79 from "../../pianoAudioFiles/pianoMidiNote79.mp3";
+import midiNote80 from "../../pianoAudioFiles/pianoMidiNote80.mp3";
+import midiNote81 from "../../pianoAudioFiles/pianoMidiNote81.mp3";
+import midiNote82 from "../../pianoAudioFiles/pianoMidiNote82.mp3";
+import midiNote83 from "../../pianoAudioFiles/pianoMidiNote83.mp3";
+import midiNote84 from "../../pianoAudioFiles/pianoMidiNote84.mp3";
+import midiNote85 from "../../pianoAudioFiles/pianoMidiNote85.mp3";
+import midiNote86 from "../../pianoAudioFiles/pianoMidiNote86.mp3";
+import midiNote87 from "../../pianoAudioFiles/pianoMidiNote87.mp3";
+import midiNote88 from "../../pianoAudioFiles/pianoMidiNote88.mp3";
+import midiNote89 from "../../pianoAudioFiles/pianoMidiNote89.mp3";
+import midiNote90 from "../../pianoAudioFiles/pianoMidiNote90.mp3";
+import midiNote91 from "../../pianoAudioFiles/pianoMidiNote91.mp3";
+import midiNote92 from "../../pianoAudioFiles/pianoMidiNote92.mp3";
+import midiNote93 from "../../pianoAudioFiles/pianoMidiNote93.mp3";
+import midiNote94 from "../../pianoAudioFiles/pianoMidiNote94.mp3";
+import midiNote95 from "../../pianoAudioFiles/pianoMidiNote95.mp3";
+import midiNote96 from "../../pianoAudioFiles/pianoMidiNote96.mp3";
+
 
 
 
@@ -163,7 +168,7 @@ export default function Piano(){
     let [pianoNote95, setPianoNote95] = useState(new Audio(midiNote95));
     let [pianoNote96, setPianoNote96] = useState(new Audio(midiNote96));    
 
-    const chordData  = useLoaderData(); 
+    const loaderData  = useLoaderData(); 
 
 
     function noteSelector(noteNumber){
@@ -661,7 +666,41 @@ export default function Piano(){
         }); 
     }
 
+    ///////////////////////////////////////////////////////////
+    /// Handle screen width, height, orientaiton /////////////
+    //////////////////////////////////////////////////////////
+    let [screenWidth, setScreenWidth ] = useState(null); 
+    let [screenHeight, setScreenHeight] = useState(null); 
+
+    useEffect( () => {
+        let hasBeenDelayMs = true; 
+        let delay = 300; 
+        let timeout = null; 
+
+        function setHeightAndWidth(){
+            if(hasBeenDelayMs){
+                hasBeenDelayMs = false; 
+                setScreenHeight(window.innerHeight);
+                setScreenWidth(window.innerWidth);
+                console.log("height/width changed"); 
+            }
+            timeout = setTimeout(function(){
+                hasBeenDelayMs = true; 
+            }, delay); 
+        } 
+        setHeightAndWidth(); 
+        window.addEventListener("resize", setHeightAndWidth);
+        
+        return () => {
+            window.removeEventListener("resize", setHeightAndWidth);
+            clearTimeout(timeout);  
+        }
+    }, []);
+    ///////////////////////////////////////////////////////////
+
     loadAllNotes(); 
+    const [chordData, setChordData] = useState(loaderData);
+    let [selectedKey, selectKey] = useState(["C", "major"]); 
     //const musicalKeys = chordData.map( data => {return data.key; })
     //console.log(musicalKeys); 
     //console.log("loader data keys : ", Object.keys(chordData)); 
@@ -669,7 +708,7 @@ export default function Piano(){
     //console.log("musicalKeyObject.MusicalKeys, ", chordData["MusicalKeyObjects"].MusicalKeys); 
     //chordData["musicalKeyObjects"].forEach( ob => 
     //    {console.log(ob); } )
-    console.log("chords by root ", chordData["chordsByRoot"]); 
+    //console.log("chords by root ", chordData["chordsByRoot"]); 
     
     /*
     /////////////////////////////////////////////////////////
@@ -689,13 +728,13 @@ export default function Piano(){
                                     scaleDegree: 1, 
                                     chords: [
                                         {
-                                            notes: ["C", "E", "G"], 
+                                            notes: [44,46,77], 
                                             root: "E",
                                             type: "dim",
                                             _id: String
                                         },
                                         {
-                                            notes: ["D", "E", "G"], 
+                                            notes: [44,56,66], 
                                             root: "D",
                                             type: "minor",
                                             _id: String,
@@ -805,14 +844,20 @@ export default function Piano(){
     /////////////////////////////////
     // 
     */
+    let mobileDeviceCutoff = 600; 
+
     return (
         <>
-
+        {screenWidth < mobileDeviceCutoff ? <MobileMain screenHeight = {screenHeight} screenWidth = {screenWidth} /> : <DesktopMain screenHeight = {screenHeight} screenWidth = {screenWidth}/>  }
+         {/*<MobileTest screenWidth = {screenWidth} screenHeight = {screenHeight} /> /*} 
+        { /*<PianoChordMenu chordData = {chordData} selectedKey = {selectedKey} playNotes = {playNotes} /> */} 
+        {/*
         <Button onClick = {() => {playNotes([43,48,50,52])}}>C</Button>    
         <Button onClick = {() => {playNotes([43,48,51,52])}}>G</Button>    
         <Button onClick = {() => {playNotes([43,48,50,55])}}>F</Button> 
         <Button onClick = {() => {playNotes([43,48,50,52])}}>Am</Button>       
         <div>Piano page!</div>
+        */}
         </>
     ); 
 }
