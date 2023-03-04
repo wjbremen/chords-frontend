@@ -12,7 +12,7 @@ export async function get_chord_data(){
     }).then(bodyText => {
         return JSON.parse(bodyText);
     }); 
-    console.log("chordData ", chordData); 
+    //console.log("chordData ", chordData); 
     loaderData["musicalKeyObjects"] = chordData; 
 
     //middle C is midi 60, B above middle C is 71

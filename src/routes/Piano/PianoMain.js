@@ -168,8 +168,6 @@ export default function Piano(){
     let [pianoNote95, setPianoNote95] = useState(new Audio(midiNote95));
     let [pianoNote96, setPianoNote96] = useState(new Audio(midiNote96));    
 
-    const loaderData  = useLoaderData(); 
-
 
     function noteSelector(noteNumber){
         let selectedNote = null; 
@@ -641,6 +639,8 @@ export default function Piano(){
         return selectedNote; 
     }
 
+    const loaderData  = useLoaderData();
+
     function loadAllNotes() {
         for(let note = 21; note <= 96; note++){
             let audio = noteSelector(note); 
@@ -700,7 +700,7 @@ export default function Piano(){
 
     loadAllNotes(); 
     const [chordData, setChordData] = useState(loaderData);
-    let [selectedKey, selectKey] = useState(["C", "major"]); 
+    
     //const musicalKeys = chordData.map( data => {return data.key; })
     //console.log(musicalKeys); 
     //console.log("loader data keys : ", Object.keys(chordData)); 
@@ -844,11 +844,14 @@ export default function Piano(){
     /////////////////////////////////
     // 
     */
-    let mobileDeviceCutoff = 600; 
+    let mobileDeviceCutoff = 800; 
 
     return (
         <>
-        {screenWidth < mobileDeviceCutoff ? <MobileMain screenHeight = {screenHeight} screenWidth = {screenWidth} /> : <DesktopMain screenHeight = {screenHeight} screenWidth = {screenWidth}/>  }
+        {screenWidth < mobileDeviceCutoff ? 
+        <MobileMain chordData = {chordData} screenHeight = {screenHeight} screenWidth = {screenWidth} /> : 
+        <DesktopMain chordData = {chordData} screenHeight = {screenHeight} screenWidth = {screenWidth}/>  
+        }
          {/*<MobileTest screenWidth = {screenWidth} screenHeight = {screenHeight} /> /*} 
         { /*<PianoChordMenu chordData = {chordData} selectedKey = {selectedKey} playNotes = {playNotes} /> */} 
         {/*
